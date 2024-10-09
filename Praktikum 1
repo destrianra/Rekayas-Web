@@ -1,0 +1,18 @@
+<?php
+// Membuat variabel JSON
+$json_data = '{"name": "Destriani", "age": 21, "skills": ["HTML", "CSS", "PHP"]}';
+
+// Decode JSON ke PHP Object
+$object_data = json_decode($json_data);
+echo "Akses nilai dari PHP Object:\n";
+echo "Name: " . $object_data->name . "\n";  // Mengakses nama
+echo "Age: " . $object_data->age . "\n";    // Mengakses umur
+echo "First Skill: " . $object_data->skills[0] . "\n";  // Mengakses skill pertama
+
+// Decode JSON ke PHP Array
+$array_data = json_decode($json_data, true);
+echo "\nAkses nilai dari PHP Array:\n";
+echo "Name: " . $array_data['name'] . "\n";  // Mengakses nama
+echo "Age: " . $array_data['age'] . "\n";    // Mengakses umur
+echo "First Skill: " . $array_data['skills'][0] . "\n";  // Mengakses skill pertama
+?>
